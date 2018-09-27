@@ -9,6 +9,8 @@ spec:
       labels:
         app: jenkins-demo
     spec:
+      imagePullSecrets:
+      - name: coohua-registry
       containers:
       - image: registry.cn-qingdao.aliyuncs.com/coohua_img/jenkins-demo:<BUILD_TAG>
         imagePullPolicy: IfNotPresent
